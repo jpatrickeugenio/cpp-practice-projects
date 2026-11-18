@@ -126,16 +126,18 @@ int main(){
         cout << enemy << " HP: " << enemyhealth << endl;
 
      } else if(action == 3){
-        playerhealth += 5;
-
+        
+        if(playerhealth == 100){
+            cout << "Your health is already full!\n";
+        }else{
+            playerhealth += 5;
         if(playerhealth > 100){
             playerhealth = 100;
         }
         cout << "Healing...." << endl;
         cout << "Your health: " << playerhealth << endl;
-        
-     }
-     else{
+       }
+     }else{
         cout << "Invalid action" << endl;
      }
     
